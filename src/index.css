@@ -1,0 +1,15 @@
+body {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(146,139,255);
+  background: linear-gradient(45deg, rgba(146,139,255,1) 0%, rgba(123,0,255,1) 31%, rgba(63,192,218,1) 100%); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+:root{
+  --scale-factor: 1.5;
+}

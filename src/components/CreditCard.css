@@ -1,0 +1,206 @@
+
+.flip-card {
+  position: relative;
+  top: 50px;
+  perspective: 1000px;
+  z-index: 5;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.credit-card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+.credit-card-image{
+  background-image: url('../assets/img/card-bg.jpeg');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+
+.credit-card-data{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.credit-card-circuit{
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.credit-card-circuit > .chip {
+  object-fit: contain;
+  width: 50px; 
+  position: relative;
+  top: 50px;
+}
+
+.credit-card-circuit > .circuit {
+  object-fit: contain;
+  height: 50px;
+}
+
+.credit-card-number{
+  padding: 0 0 0 25px;
+  margin-top: 50px;
+  color: white;
+  font-size: 1.5em;
+}
+
+.credit-card-info{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 1em;
+}
+
+
+.credit-card-holder{
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 20px 25px;
+}
+
+.credit-card-expires{
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px 0 25px;
+}
+
+.rotate{
+  transform: rotateY(180deg);
+}
+
+.credit-card-back{
+  width: 400px;
+  height: 255px;
+  border-radius: 10px;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  -webkit-box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 0px 1px 21px 5px rgba(0,0,0,0.45); 
+  box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 0px 1px 21px 5px rgba(0,0,0,0.45);
+  top: 0;
+  z-index: 10;
+}
+
+.credit-card-front {
+  width: 400px;
+  height: 255px;
+  border-radius: 10px;
+  position: relative;
+  -webkit-box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 0px 1px 21px 5px rgba(0,0,0,0.45); 
+  box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 0px 1px 21px 5px rgba(0,0,0,0.45);
+  z-index: 5;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+
+.credit-card-cvv {
+  height: 40px;
+  margin: 0px 10px 0px 10px;
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+
+.cvv-text {
+  text-align: end;
+  color: white;
+  margin-right: 15px;
+  margin-top: 35px;
+  font-size: 0.8em;
+}
+
+
+
+
+@media screen and (max-width: 652px) {
+
+  .credit-card-front{
+    width: calc(400px / var(--scale-factor));
+    height: calc(255px / var(--scale-factor));
+  }
+
+  .credit-card-back{
+    width: calc(400px / var(--scale-factor));
+    height: calc(255px / var(--scale-factor));
+  }
+
+  .flip-card{
+    width: calc(400px / var(--scale-factor));
+    height: calc(255px / var(--scale-factor));
+  }
+  
+  
+  .credit-card-image{
+    border-radius: calc(10px / var(--scale-factor));
+  }
+  
+  
+  .credit-card-circuit{
+    padding: calc(25px / var(--scale-factor));
+  }
+
+  .credit-card-info{
+    font-size: calc(1em / var(--scale-factor));
+  }
+  
+  .credit-card-circuit > .chip {
+    width: calc(50px / var(--scale-factor)); 
+    top: calc(50px / var(--scale-factor));
+  }
+  
+  .credit-card-circuit > .circuit {
+    height: calc(50px / var(--scale-factor));
+  }
+  
+  .credit-card-number{
+    padding: 0 0 0 calc(25px / var(--scale-factor));
+    margin-top: calc(50px / var(--scale-factor));
+    font-size: calc(1.5em / var(--scale-factor));
+  }
+    
+  .credit-card-holder{
+    padding: 0 0 calc(20px/var(--scale-factor)) calc(25px / var(--scale-factor));
+  }
+  
+  .credit-card-expires{
+    padding: 0 calc(25px / var(--scale-factor)) 0 calc(25px / var(--scale-factor));
+  }
+
+
+  .credit-card-cvv {
+    height: calc(40px / var(--scale-factor));
+    margin: 0px calc(10px/var(--scale-factor)) 0px calc(10px /var(--scale-factor));
+    border-radius: calc(5px/var(--scale-factor));
+    font-size: calc(1.2em / var(--scale-factor));
+  }
+
+  .cvv-text {
+    margin-right: calc(15px/var(--scale-factor));
+    margin-top: calc(35px/var(--scale-factor));
+    font-size: calc(0.8em/var(--scale-factor));
+  }
+
+}
