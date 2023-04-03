@@ -14,3 +14,5 @@ For the expiration date, options starting from the current year and up to 12 yea
 When the user places in the CVV input, the back of the credit card is displayed
 
 When the user enters the credit card number, the logo of the corresponding brand is shown. 
+
+## LINK https://fab-credit-card-form.netlify.app/
